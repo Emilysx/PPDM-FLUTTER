@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'Login.dart'; // Importando para o botão finalizar ir para o login
+import 'Login.dart'; 
 
 class Onboarding3 extends StatelessWidget {
   const Onboarding3({super.key});
@@ -12,7 +12,6 @@ class Onboarding3 extends StatelessWidget {
       body: SafeArea(
         child: Column(
           children: [
-            // Barra superior com a seta e o título
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
               child: Row(
@@ -39,13 +38,12 @@ class Onboarding3 extends StatelessWidget {
 
             const SizedBox(height: 20),
 
-            // Título e Texto de Descrição
             const Text(
               "Agendamentos",
               style: TextStyle(
                 fontSize: 22,
                 fontWeight: FontWeight.bold,
-                color: Color(0xFF4A148C), // Roxo escuro para o texto
+                color: Color(0xFF4A148C),
               ),
             ),
             const Padding(
@@ -88,7 +86,7 @@ class Onboarding3 extends StatelessWidget {
                         );
                       },
                       style: ElevatedButton.styleFrom(
-                        backgroundColor: const Color(0xFF4A148C), // Roxo forte
+                        backgroundColor: const Color(0xFF4A148C), 
                         minimumSize: const Size(double.infinity, 55),
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(12),
