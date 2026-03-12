@@ -9,7 +9,6 @@ class Onboarding2 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // Cor de fundo exata do seu FlutterFlow (#C7E7BD)
       backgroundColor: const Color(0xFFC7E7BD),
       body: SafeArea(
         child: Column(
@@ -34,20 +33,20 @@ class Onboarding2 extends StatelessWidget {
                       ),
                     ),
                   ),
-                  const SizedBox(width: 48), // Espaçador para centralizar o título
+                  const SizedBox(width: 48),
                 ],
               ),
             ),
 
             const SizedBox(height: 20),
 
-            // Título e Texto de Descrição
+            // Título e Texto 
             const Text(
               "Cuidados Veterinários",
               style: TextStyle(
                 fontSize: 22,
                 fontWeight: FontWeight.bold,
-                color: Color(0xFF1B4332), // Verde escuro
+                color: Color(0xFF1B4332), 
               ),
             ),
             const Padding(
@@ -68,7 +67,6 @@ class Onboarding2 extends StatelessWidget {
               child: Stack(
                 alignment: Alignment.bottomCenter,
                 children: [
-                  // Imagem dos veterinários (conforme sua pasta assets)
                   Container(
                     width: double.infinity,
                     decoration: const BoxDecoration(
@@ -86,7 +84,7 @@ class Onboarding2 extends StatelessWidget {
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        // Botão Pular -> Vai para o Login
+                        // Botão Pular 
                         ElevatedButton(
                           onPressed: () {
                             Navigator.push(
@@ -95,7 +93,7 @@ class Onboarding2 extends StatelessWidget {
                             );
                           },
                           style: ElevatedButton.styleFrom(
-                            backgroundColor: const Color(0xFFFF80AB), // Rosa
+                            backgroundColor: const Color(0xFFFF80AB),
                             minimumSize: const Size(140, 50),
                             shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(12),
@@ -104,7 +102,7 @@ class Onboarding2 extends StatelessWidget {
                           child: const Text("Pular", style: TextStyle(color: Colors.white, fontSize: 18)),
                         ),
 
-                        // Botão Próximo -> Vai para Onboarding3
+                        // Botão Próximo 
                         ElevatedButton(
                           onPressed: () {
                             Navigator.push(
@@ -113,7 +111,7 @@ class Onboarding2 extends StatelessWidget {
                             );
                           },
                           style: ElevatedButton.styleFrom(
-                            backgroundColor: const Color(0xFF1B4332), // Verde escuro
+                            backgroundColor: const Color(0xFF1B4332), 
                             minimumSize: const Size(140, 50),
                             shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(12),
