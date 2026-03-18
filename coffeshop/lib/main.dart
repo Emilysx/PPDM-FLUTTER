@@ -1,4 +1,5 @@
 import 'package:coffeshop/pages/TelaInicial.dart';
+import 'package:coffeshop/pages/linkspage.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -11,7 +12,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: TelaInicial()
+      home: LinksPage()
     );
   }
 }
