@@ -34,6 +34,8 @@ dependencies:
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.8
+  # para usar lunks 
+  url_launcher: ^6.3.2
 
 dev_dependencies:
   flutter_test:
@@ -62,7 +64,7 @@ flutter:
     - assets/perfil.png
     - assets/fundo.png
     - assets/perfil2.png
-    - assets/linkdin.png
+    - assets/linkedin.png
     - assets/instagram.png
     - assets/github.png
     - assets/email.png
@@ -70,6 +72,23 @@ flutter:
     - assets/tecnologia.png
     - assets/curiosidade.png
     - assets/projetos.png
+    - assets/melia.png
+    - assets/vix.png
+    - assets/solis.png
+
+    - assets/react.png
+    - assets/django.png
+    - assets/python.png
+    - assets/mysql.png
+    - assets/html.png
+    - assets/css.png
+    - assets/java.png
+    - assets/js.png
+    - assets/flutter.png
+    - assets/figma.png
+
+    - assets/unha.png
+    - assets/unha1.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images

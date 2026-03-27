@@ -19,18 +19,6 @@ class Inicio extends StatelessWidget {
             ),
           ),
 
-          // ÍCONES DE ESTRELA
-          const Positioned(
-            top: 60,
-            right: 40,
-            child: Icon(Icons.auto_awesome, color: Colors.white, size: 45),
-          ),
-          const Positioned(
-            top: 250,
-            left: 30,
-            child: Icon(Icons.auto_awesome, color: Color(0xFF1A237E), size: 30),  
-          ),
-
           // FOTO DE PERFIL
           Positioned(
             bottom: -10,
