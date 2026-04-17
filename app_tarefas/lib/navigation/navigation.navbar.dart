@@ -1,6 +1,7 @@
 import 'package:app_tarefas/screens/tela_delete.dart';
 import 'package:app_tarefas/screens/tela_get.dart';
 import 'package:app_tarefas/screens/tela_post.dart';
+import 'package:app_tarefas/screens/tela_put.dart';
 import 'package:flutter/material.dart';
  
 class NavBar extends StatefulWidget {
@@ -18,6 +19,7 @@ class _NavbarState extends State<NavBar> {
     TelaGet(),
     TelaDelete(),
     TelaPost(),
+    TelaPut()
   ];
  
   void mudarIndex(int novoIndex){    // função para mudar a tela
@@ -31,10 +33,13 @@ class _NavbarState extends State<NavBar> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: pages.elementAt(indexAtual),
-      bottomNavigationBar: BottomNavigationBar(items: [
+      bottomNavigationBar: BottomNavigationBar(
+        type: BottomNavigationBarType.fixed, //permite ter mais de 3 itens na 
+        items: [
         BottomNavigationBarItem(icon: Icon(Icons.get_app_rounded), label: "Get"),
         BottomNavigationBarItem(icon: Icon(Icons.delete_forever_rounded), label: "Delete"),
         BottomNavigationBarItem(icon: Icon(Icons.post_add_rounded), label: "Post"),
+        BottomNavigationBarItem(icon: Icon(Icons.edit), label: "Put"),
       ],
  
       currentIndex: indexAtual,
