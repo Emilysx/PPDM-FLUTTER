@@ -2,6 +2,7 @@ import 'package:app_tarefas/screens/tela_delete.dart';
 import 'package:app_tarefas/screens/tela_get.dart';
 import 'package:app_tarefas/screens/tela_post.dart';
 import 'package:app_tarefas/screens/tela_put.dart';
+import 'package:app_tarefas/screens/tela_local.dart';
 import 'package:flutter/material.dart';
  
 class NavBar extends StatefulWidget {
@@ -19,7 +20,8 @@ class _NavbarState extends State<NavBar> {
     TelaGet(),
     TelaDelete(),
     TelaPost(),
-    TelaPut()
+    TelaPut(),
+    TelaLocal()
   ];
  
   void mudarIndex(int novoIndex){    // função para mudar a tela
@@ -40,6 +42,7 @@ class _NavbarState extends State<NavBar> {
         BottomNavigationBarItem(icon: Icon(Icons.delete_forever_rounded), label: "Delete"),
         BottomNavigationBarItem(icon: Icon(Icons.post_add_rounded), label: "Post"),
         BottomNavigationBarItem(icon: Icon(Icons.edit), label: "Put"),
+        BottomNavigationBarItem(icon: Icon(Icons.local_activity), label: "Local"),
       ],
  
       currentIndex: indexAtual,
