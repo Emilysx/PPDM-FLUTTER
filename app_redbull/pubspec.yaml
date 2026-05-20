@@ -71,6 +71,7 @@ flutter:
     - assets/redbull_sugarfree.png
     - assets/redbull_tropical.png
     - assets/redbull_winter.png
+    - assets/splash_redbull.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images

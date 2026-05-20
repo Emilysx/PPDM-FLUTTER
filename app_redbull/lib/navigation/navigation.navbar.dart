@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-// Importe suas telas aqui conforme for criando elas
 import '../screens/tela_get.dart';
-import '../screens/tela_post.dart';
-import '../screens/tela_local.dart';
+import '../screens/tela_carrinho.dart';
+import '../screens/tela_favoritos.dart';
+import '../screens/tela_perfil.dart'; // Importando a nova tela de perfil
+import '../theme/cores.dart';
 
 class NavBar extends StatefulWidget {
   const NavBar({super.key});
@@ -12,34 +13,57 @@ class NavBar extends StatefulWidget {
 }
 
 class _NavBarState extends State<NavBar> {
-  int indexAtual = 0;
+  int _indexAtual = 0;
 
-  // Lista de páginas seguindo seu padrão
-  List pages = [
-    const TelaGet(),    // Sua tela de consulta
-    const TelaPost(),   // Sua tela de cadastro
-    const TelaLocal(),  // Sua tela de favoritos/local
+  // Lista com as 4 telas ordenadas exatamente como você pediu
+  final List<Widget> _paginas = [
+    const TelaGet(),       // Produtos
+    const TelaCarrinho(),    // Carrinho
+    const TelaFavoritos(),   // Favoritos
+    const TelaPerfil(),      // Perfil
   ];
-
-  void mudarIndex(int novoIndex) {
-    setState(() {
-      indexAtual = novoIndex;
-    });
-  }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: pages[indexAtual],
+      body: _paginas[_indexAtual],
       bottomNavigationBar: BottomNavigationBar(
+        currentIndex: _indexAtual,
+        onTap: (index) {
+          setState(() {
+            _indexAtual = index;
+          });
+        },
+        // Configurações de estilo da barra inferior
         type: BottomNavigationBarType.fixed,
-        currentIndex: indexAtual,
-        onTap: mudarIndex,
-        selectedItemColor: const Color(0xFF000B47), // Azul Red Bull
+        backgroundColor: AppCores.azulEscuro,
+        selectedItemColor: AppCores.amareloRB, // Cor amarela quando selecionado
+        unselectedItemColor: Colors.white.withOpacity(0.6), // Branco fosco quando apagado
+        selectedLabelStyle: const TextStyle(fontWeight: FontWeight.bold, fontSize: 12),
+        unselectedLabelStyle: const TextStyle(fontSize: 11),
+        
+        // Itens ordenados: Produtos, Carrinho, Favoritos, Perfil
         items: const [
-          BottomNavigationBarItem(icon: Icon(Icons.inventory_2), label: "Produtos"),
-          BottomNavigationBarItem(icon: Icon(Icons.add_circle_outline), label: "Sugerir"),
-          BottomNavigationBarItem(icon: Icon(Icons.star_border), label: "Favoritos"),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.local_drink_outlined),
+            activeIcon: Icon(Icons.local_drink),
+            label: 'Produtos',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.shopping_cart_outlined),
+            activeIcon: Icon(Icons.shopping_cart),
+            label: 'Carrinho',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.favorite_border),
+            activeIcon: Icon(Icons.favorite),
+            label: 'Favoritos',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.person_outline),
+            activeIcon: Icon(Icons.person),
+            label: 'Perfil',
+          ),
         ],
       ),
     );

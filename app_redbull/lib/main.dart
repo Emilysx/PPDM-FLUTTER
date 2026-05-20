@@ -1,7 +1,12 @@
-import 'package:app_redbull/screens/splashscreen.dart';
 import 'package:flutter/material.dart';
+import 'screens/splashscreen.dart';
+import 'controllers/controlador_favoritos.dart';
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  
+  // Carrega os favoritos do banco local
+  await ControladorFavoritos.carregarFavoritos();
 
-void main() {
   runApp(const MyApp());
 }
 
@@ -10,9 +15,9 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: const Splashscreen(), 
+      home: SplashScreen(), 
     );
   }
 }
